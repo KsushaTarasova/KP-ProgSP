@@ -16,6 +16,7 @@
     <mapping class = "project.Models.User"/>
     <mapping class="project.Models.Address"/>
     <mapping class="project.Models.UserDetails"/>
+    <mapping class="project.Models.Role"/>
 
   </session-factory>
 </hibernate-configuration>
