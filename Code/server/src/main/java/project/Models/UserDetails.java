@@ -29,7 +29,7 @@ public class UserDetails {
     String phone;
     @Column(name = "icon_url")
     String iconUrl;
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id")
     Address address;
 }
