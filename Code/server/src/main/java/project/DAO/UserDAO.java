@@ -9,11 +9,11 @@ import java.util.List;
 
 public class UserDAO implements CRUD <User> {
     @Override
-    public boolean add(User object) {
+    public boolean add(User user) {
         boolean isAdded = false;
         try(Session session = SessionFactoryImpl.getSessionFactory().openSession()){
             session.beginTransaction();
-            session.persist(object);
+            session.persist(user);
             session.getTransaction().commit();
             isAdded = true;
         } catch (NoClassDefFoundError e){
@@ -23,11 +23,11 @@ public class UserDAO implements CRUD <User> {
     }
 
     @Override
-    public boolean update(User object) {
+    public boolean update(User user) {
         boolean isUpdated = false;
         try(Session session = SessionFactoryImpl.getSessionFactory().openSession()){
             session.beginTransaction();
-            session.merge(object);
+            session.merge(user);
             session.getTransaction().commit();
             isUpdated = true;
         } catch (NoClassDefFoundError e){
