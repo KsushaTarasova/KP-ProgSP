@@ -16,7 +16,7 @@ import project.Enums.Roles;
 @Table(name = "role")
 public class Role {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+
     @Column(name="role_id")
     int id;
     @Enumerated(EnumType.STRING)
